@@ -26,6 +26,11 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <!-- <div class="test" v-for="env in envs" :key="env.id">
+      <input type="radio" :id="'envInput' + env.id" :value="env.title" v-model="currentEnv">
+      <label :for="'envInput' + env.id">{{ env.title }}</label>
+    </div>
+    <p>Current env: {{ currentEnv }}</p> -->
   </div>
 </template>
 
@@ -34,6 +39,16 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data () {
+    return {
+      envs: [
+        { id: 1, title: "test" },
+        { id: 2, title: "develop" },
+        { id: 3, title: "production" }
+      ],
+      currentEnv: ''
+    }
   }
 }
 </script>
