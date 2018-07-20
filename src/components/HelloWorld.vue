@@ -35,10 +35,13 @@
 </template>
 
 <script>
+import People from '@/js/People.js'
+
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
+    author: People
   },
   data () {
     return {
